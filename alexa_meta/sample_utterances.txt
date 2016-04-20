@@ -1,0 +1,31 @@
+GetDishStatus are the dishes clean
+GetDishStatus are the dishes dirty
+GetDishStatus is the dishwasher clean
+GetDishStatus is the dishwasher dirty
+GetDishStatus if it's clean
+GetDishStatus if its clean
+GetDishStatus if it is clean
+GetDishStatus if it's dirty
+GetDishStatus if its dirty
+GetDishStatus if it is dirty
+GetDishStatus are you clean
+GetDishStatus are you dirty
+GetDishStatus whats the status of the dishes
+GetDishStatus what are the dishes
+GetDishStatus the dish status
+GetDishStatus about the dish status
+GetDishStatus about the dishes
+GetDishStatus dish status
+
+SetDishStatus it's {status}
+SetDishStatus its {status}
+SetDishStatus it is {status}
+SetDishStatus the dishes are {status}
+SetDishStatus the dishwasher is {status}
+
+AMAZON.HelpIntent help
+AMAZON.HelpIntent help me
+AMAZON.HelpIntent how do you work
+AMAZON.HelpIntent how it works
+AMAZON.HelpIntent what it can do
+AMAZON.HelpIntent for help

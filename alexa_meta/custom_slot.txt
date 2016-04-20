@@ -1,0 +1,5 @@
+clean
+dirty
+washed
+unwashed
+being cleaned

@@ -1,0 +1,8 @@
+{
+  "name": "dishes_io",
+  "description": "Dishes.io API and Alexa functions",
+  "runtime": "python",
+  "memory": 128,
+  "timeout": 10,
+  "role": "arn:aws:iam::204617975632:role/lambda_dynamo"
+}
