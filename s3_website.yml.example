@@ -1,0 +1,8 @@
+s3_id: ACCESS_KEY_GOES_HERE
+s3_secret: SECRET_GOES_HERE
+s3_bucket: www.dishes.io
+
+# site directory
+site: website
+index_document: index.html
+error_document: error.html
