@@ -166,9 +166,9 @@ def help_response():
     return build_response(
         {},
         build_speechlet_response(
-            ("Ask about the dishes! For example: Alexa, ask the dishwasher if it's clean. "
-             "Alexa, tell the dishwasher that it's dirty. "
-             "Alexa ask the dishwasher the status of the dishes.")
+            ("Ask me a question such as, what is the status of the dishes? Or, are the dishes "
+             "clean? You can also tell me the dishes are dirty, clean, washed, or unwashed. I'll "
+             "remember for next time you ask.")
         )
     )
 
