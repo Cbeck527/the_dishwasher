@@ -26,6 +26,7 @@ SetDishStatus its {status}
 SetDishStatus it is {status}
 SetDishStatus the dishes are {status}
 SetDishStatus the dishwasher is {status}
+SetDishStatus {status}
 
 AMAZON.HelpIntent help
 AMAZON.HelpIntent help me

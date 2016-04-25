@@ -11,8 +11,8 @@ up the dishwasher.
 ### Example Phrases
 
  - Alexa, ask the dishwasher about the dishes
- - Alexa, tell the dishwasher the dishes are dirty
- - Alexa, ask the dishwasher if it's dirty
+ - Alexa, tell the dishwasher that the dishes are dirty
+ - Alexa, tell the dishwasher the dishes are clean
 
 ### Category
 
