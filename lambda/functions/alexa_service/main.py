@@ -63,7 +63,7 @@ def on_launch(launch_request, session):
 
     print("on_launch requestId=" + launch_request['requestId'] +
           ", sessionId=" + session['sessionId'])
-    return help_response()
+    return launch_response()
 
 def on_intent(intent_request, session):
     """
@@ -136,13 +136,15 @@ def set_dish_status(request, user):
     try:
         status = request['slots']['status']['value']
     except KeyError:
-        return help_response()
+        return partial_response()
 
     if status not in CUSTOM_SLOT_WORDS:
         return build_response(
             {},
             build_speechlet_response(
-                "Sorry, I don't understand {}. Try saying clean or dirty.".format(status)
+                "Sorry, I don't understand {}. Are your dishes clean or dirty?".format(status),
+                should_end_session=False,
+                reprompt="I missed that. Are your dishes clean or dirty?"
             )
         )
 
@@ -168,7 +170,39 @@ def help_response():
         build_speechlet_response(
             ("Ask me a question such as, what is the status of the dishes? Or, are the dishes "
              "clean? You can also tell me the dishes are dirty, clean, washed, or unwashed. I'll "
-             "remember for next time you ask.")
+             "remember for next time you ask. How can I help?"),
+            should_end_session=False,
+            reprompt=("Sorry, I missed that. Ask me if the dishes are clean, or tell me if your "
+                      "dishes are clean or dirty."),
+        )
+    )
+
+
+def partial_response():
+    """
+    Builds speech output that prompts the user to finish the intent,
+    which can only be setting the dish status
+    """
+    return build_response(
+        {},
+        build_speechlet_response(
+            ("Sorry, I missed that. Are your dishes clean or dirty?"), should_end_session=False
+        )
+    )
+
+
+def launch_response():
+    """
+    Builds speech output that prompts the user to finish the intent,
+    which can only be setting the dish status
+    """
+    return build_response(
+        {},
+        build_speechlet_response(
+            ("Establishing uplink to dishwasher. What would you like to do?"),
+            should_end_session=False,
+            reprompt=("Sorry, I missed that. Ask me if the dishes are clean, or tell me if your "
+                      "dishes are clean or dirty."),
         )
     )
 
